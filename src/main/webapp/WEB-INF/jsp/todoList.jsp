@@ -23,7 +23,7 @@
                             <td class="text-decoration-line-through text-black-50">Done</td>
                             <td>
                                 <a href="/todo/edit?id=${todo.id}" class="btn btn-warning">Edit</a>
-                                <a href="" class="btn btn-danger">Delete</a>
+                                <a href="/todo/delete?id=${todo.id}" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
                     </del>
@@ -35,7 +35,7 @@
                         <td>Pending</td>
                         <td>
                             <a href="/todo/edit?id=${todo.id}" class="btn btn-warning">Edit</a>
-                            <a href="" class="btn btn-danger">Delete</a>
+                            <a href="/todo/delete?id=${todo.id}" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
                 </c:otherwise>

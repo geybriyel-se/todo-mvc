@@ -2,15 +2,13 @@ package com.geybriyel.todomvc.controller;
 
 import com.geybriyel.todomvc.entity.Todo;
 import com.geybriyel.todomvc.service.TodoService;
+import jakarta.persistence.PostRemove;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -69,4 +67,12 @@ public class TodoController {
         todoService.updateTodo(todo);
         return "redirect:all-todos";
     }
+
+    // TODO: 10/13/23 replace with post after adding 'active' field
+    @GetMapping("/delete")
+    public String deleteTodo(@RequestParam Long id) {
+        todoService.deleteTodo(id);
+        return "redirect:all-todos";
+    }
+
 }
