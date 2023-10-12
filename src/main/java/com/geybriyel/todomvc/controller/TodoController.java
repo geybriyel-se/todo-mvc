@@ -10,6 +10,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -56,4 +57,16 @@ public class TodoController {
         return "redirect:all-todos";
     }
 
+    @GetMapping("/edit")
+    public String showEditPage(@RequestParam Long id, ModelMap modelMap) {
+        Todo todo = todoService.getTodoById(id);
+        modelMap.put("todo", todo);
+        return "todo";
+    }
+
+    @PostMapping("/edit")
+    public String editTodo(Todo todo) {
+        todoService.updateTodo(todo);
+        return "redirect:all-todos";
+    }
 }

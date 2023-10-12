@@ -22,7 +22,7 @@
                             <td class="text-decoration-line-through text-black-50">${todo.targetDate}</td>
                             <td class="text-decoration-line-through text-black-50">Done</td>
                             <td>
-                                <a href="" class="btn btn-warning">Edit</a>
+                                <a href="/todo/edit?id=${todo.id}" class="btn btn-warning">Edit</a>
                                 <a href="" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
@@ -34,7 +34,7 @@
                         <td>${todo.targetDate}</td>
                         <td>Pending</td>
                         <td>
-                            <a href="" class="btn btn-warning">Edit</a>
+                            <a href="/todo/edit?id=${todo.id}" class="btn btn-warning">Edit</a>
                             <a href="" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>

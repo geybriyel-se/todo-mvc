@@ -25,4 +25,12 @@ public class TodoService {
         todoRepository.save(todo);
     }
 
+    public Todo getTodoById(Long id) {
+        return todoRepository.findById(id).get();
+    }
+
+    public void updateTodo(Todo todo) {
+        todoRepository.save(todo);
+    }
+
 }
