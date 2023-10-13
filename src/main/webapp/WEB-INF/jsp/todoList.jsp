@@ -2,7 +2,7 @@
 <%@ include file="common/navbar.jspf"%>
 
 <div class="container">
-    <h1 class="mb-md-5">Let's keep working!</h1>
+    <h1 class="mb-md-5">Let's keep working, ${name}!</h1>
     <table class="table">
         <thead>
             <tr>

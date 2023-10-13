@@ -2,7 +2,6 @@ package com.geybriyel.todomvc.repository;
 
 import com.geybriyel.todomvc.entity.Todo;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
